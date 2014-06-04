@@ -1,0 +1,26 @@
+{
+  "name": "koa-polyfills",
+  "description": "Koa middleware for polyfills",
+  "version": "0.1.0",
+  "dependencies": {
+    "ms": "*",
+    "koa-spdy-push": "*"
+  },
+  "devDependencies": {
+    "koa": "*",
+    "mocha": "*",
+    "should": "3",
+    "supertest": "*"
+  },
+  "scripts": {
+    "test": "mocha --harmony-generators --require should --reporter spec --bail"
+  },
+  "author": {
+    "name": "Jonathan Ong",
+    "email": "me@jongleberry.com",
+    "url": "http://jongleberry.com",
+    "twitter": "https://twitter.com/jongleberry"
+  },
+  "repository": "polyfills/koa",
+  "license": "MIT"
+}
