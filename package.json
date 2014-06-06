@@ -1,7 +1,7 @@
 {
   "name": "koa-polyfills",
   "description": "Koa middleware for polyfills",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "dependencies": {
     "ms": "*",
     "polyfills": "*",
