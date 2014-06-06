@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "dependencies": {
     "ms": "*",
+    "polyfills": "*",
     "koa-spdy-push": "*"
   },
   "devDependencies": {
