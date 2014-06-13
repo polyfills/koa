@@ -27,7 +27,7 @@ module.exports = function (options) {
     var js = yield* polyfill(context.req.headers['user-agent'])
       .build(minify, true)
 
-    push(context, {
+    return push(context, {
       path: path,
       headers: {
         'cache-control': cacheControl,

@@ -3,15 +3,15 @@
   "description": "Koa middleware for polyfills",
   "version": "0.1.1",
   "dependencies": {
-    "ms": "*",
-    "polyfills": "*",
-    "koa-spdy-push": "*"
+    "ms": "0",
+    "polyfills": "0",
+    "koa-spdy-push": "0"
   },
   "devDependencies": {
     "koa": "*",
-    "mocha": "*",
+    "mocha": "1",
     "should": "3",
-    "supertest": "*"
+    "supertest": "0"
   },
   "scripts": {
     "test": "mocha --harmony-generators --require should --reporter spec --bail"
