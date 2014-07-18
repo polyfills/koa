@@ -24,8 +24,7 @@ module.exports = function (options) {
 
   Polyfills.prototype.push = function* () {
     var context = this.context
-    var js = yield* polyfill(context.req.headers['user-agent'])
-      .build(minify, true)
+    var js = yield polyfill(context.req.headers['user-agent']).build(minify, true)
 
     return push(context, {
       path: path,
@@ -42,12 +41,10 @@ module.exports = function (options) {
 
   return function* polyfills(next) {
     this.polyfills = new Polyfills(this)
-
     if (this.request.path !== path) return yield* next
 
     var gzip = this.request.acceptsEncodings('gzip', 'identity') === 'gzip'
-    var js = yield* polyfill(this.req.headers['user-agent'])
-      .build(minify, gzip)
+    var js = yield polyfill(this.req.headers['user-agent']).build(minify, gzip)
 
     this.response.set('Cache-Control', cacheControl)
     this.response.set('Content-Encoding', gzip ? 'gzip' : 'identity')
