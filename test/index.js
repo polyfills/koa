@@ -21,6 +21,9 @@ describe('Koa Polyfills', function () {
     .expect(200, function (err, res) {
       if (err) return done(err)
 
+      assert(res.headers['etag'])
+      assert(res.headers['last-modified'])
+
       new Function(res.text)
       done()
     })
