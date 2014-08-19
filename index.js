@@ -13,7 +13,7 @@ module.exports = function (options) {
 
   // note: i want to tell proxies to not cache this,
   // not sure how to do that
-  var maxAge = options.maxAge || '2 weeks'
+  var maxAge = options.maxage || options.maxAge || '14 days'
   if (typeof maxAge === 'string') maxAge = require('ms')(maxAge)
   maxAge = Math.round(maxAge / 1000)
   var cacheControl = 'public, max-age=' + maxAge
