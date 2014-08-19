@@ -25,5 +25,11 @@
     "twitter": "https://twitter.com/jongleberry"
   },
   "repository": "polyfills/koa",
-  "license": "MIT"
+  "license": "MIT",
+  "keywords": [
+    "koa",
+    "polyfills",
+    "polyfill"
+  ],
+  "files": ["index.js"]
 }
