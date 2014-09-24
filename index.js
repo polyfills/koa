@@ -1,5 +1,5 @@
 
-var push = require('koa-spdy-push')()
+var spdy = require('spdy-push')
 
 var production = process.env.NODE_ENV === 'production'
 
@@ -57,7 +57,7 @@ module.exports = function (options) {
     var buf = yield polyfill.read(data.name, ext)
     headers['content-length'] = buf.length
 
-    return push(context, {
+    return spdy(context.res).push({
       path: path,
       headers: headers,
       body: buf
