@@ -5,7 +5,7 @@
   "dependencies": {
     "ms": "0",
     "polyfills": "1",
-    "spdy-push": "^1.0.0"
+    "push-polyfills": "^1.0.0"
   },
   "devDependencies": {
     "koa": "0",

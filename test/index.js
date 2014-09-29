@@ -15,14 +15,13 @@ describe('Koa Polyfills', function () {
     request(app.listen())
     .get('/polyfill.js')
     .set('User-Agent', safari7)
-    .expect('Content-Type', 'application/javascript; charset=utf-8')
+    .expect('Content-Type', /application\/javascript/)
     .expect('Content-Encoding', 'gzip')
     .expect('Vary', 'Accept-Encoding, User-Agent')
     .expect(200, function (err, res) {
       if (err) return done(err)
 
       assert(res.headers['etag'])
-      assert(res.headers['last-modified'])
 
       new Function(res.text)
       done()
