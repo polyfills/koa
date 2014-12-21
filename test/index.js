@@ -16,13 +16,9 @@ describe('Koa Polyfills', function () {
     .get('/polyfill.js')
     .set('User-Agent', safari7)
     .expect('Content-Type', /application\/javascript/)
-    .expect('Content-Encoding', 'gzip')
-    .expect('Vary', 'Accept-Encoding, User-Agent')
+    .expect('Vary', 'User-Agent')
     .expect(200, function (err, res) {
       if (err) return done(err)
-
-      assert(res.headers['etag'])
-
       new Function(res.text)
       done()
     })

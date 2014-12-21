@@ -4,12 +4,11 @@
   "version": "1.1.0",
   "dependencies": {
     "ms": "0",
-    "polyfills": "1",
-    "push-polyfills": "^1.0.0"
+    "polyfills": "2"
   },
   "devDependencies": {
     "koa": "0",
-    "mocha": "1",
+    "mocha": "2",
     "supertest": "0",
     "istanbul-harmony": "0"
   },

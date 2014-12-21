@@ -11,10 +11,6 @@
 
 [Polyfills](https://github.com/polyfills/polyfills/) middleware for [koa](https://github.com/koajs/koa).
 
-- Option to SPDY push dependencies
-- Handles gzip compression
-- Caches on the server
-
 ## Usage
 
 ```bash
@@ -32,19 +28,6 @@ app.use(require('koa-polyfills')())
 The `options` for the middleware, other than those passed directly to [polyfills](https://github.com/polyfills/polyfills/), are:
 
 - `maxAge` - the max age for the polyfill's cache control, defaulting to `2 weeks`
-- `minify` - whether to minify the polyfills, defaulting to `process.env.NODE_ENV === 'production'`
-
-### yield this.polyfills.push()
-
-Call this to SPDY Push the polyfills to the client to avoid an additional HTTP request.
-
-```js
-app.use(function* (next) {
-  yield* next;
-
-  if (this.response.is('html')) yield this.polyfills.push()
-})
-```
 
 [npm-image]: https://img.shields.io/npm/v/koa-polyfills.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/koa-polyfills
