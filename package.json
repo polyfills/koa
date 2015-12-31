@@ -7,9 +7,9 @@
     "polyfills": "2"
   },
   "devDependencies": {
-    "koa": "0",
+    "koa": "1.1.2",
     "mocha": "2",
-    "supertest": "0",
+    "supertest": "1.1.0",
     "istanbul-harmony": "0"
   },
   "scripts": {
